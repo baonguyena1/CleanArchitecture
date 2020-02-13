@@ -29,13 +29,17 @@ final class Network<T: Codable> {
         return decoder
     }()
     
-    func getItem(_ input: APIInput) -> Observable<T> {
+    func requestItem(_ input: APIInput) -> Observable<T> {
         return Observable.create { [weak self] (observable) -> Disposable in
             
             guard let `self` = self else {
                 return Disposables.create()
             }
-            let request = self.manager.request(input.urlEncoding, method: input.method, parameters: input.parameters, encoding: input.encoding, headers: input.headers)
+            let request = self.manager.request(input.urlEncoding,
+                                               method: input.method,
+                                               parameters: input.parameters,
+                                               encoding: input.encoding,
+                                               headers: input.headers)
                 .responseData(queue: DispatchQueue.global(qos: .utility)) { (response) in
                     
                     switch response.result {
@@ -56,13 +60,17 @@ final class Network<T: Codable> {
         }
     }
     
-    func getItems(_ input: APIInput) -> Observable<[T]> {
+    func requestItems(_ input: APIInput) -> Observable<[T]> {
         return Observable.create { [weak self] (observable) -> Disposable in
             
             guard let `self` = self else {
                 return Disposables.create()
             }
-            let request = self.manager.request(input.urlEncoding, method: input.method, parameters: input.parameters, encoding: input.encoding, headers: input.headers)
+            let request = self.manager.request(input.urlEncoding,
+                                               method: input.method,
+                                               parameters: input.parameters,
+                                               encoding: input.encoding,
+                                               headers: input.headers)
                 .responseData(queue: DispatchQueue.global(qos: .utility)) { (response) in
                     
                     switch response.result {

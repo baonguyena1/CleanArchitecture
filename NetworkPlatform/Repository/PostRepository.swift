@@ -18,6 +18,6 @@ public final class PostRepository {
     
     public func fetchPosts() -> Observable<[Post]> {
         let apiInput = APIInput(urlString: "https://jsonplaceholder.typicode.com/posts", method: .get)
-        return network.getItems(apiInput)
+        return network.requestItems(apiInput)
     }
 }

@@ -18,8 +18,11 @@ class DependencyAssembly {
         
         container.register(AllPostViewController.self) { (r, navigation: UINavigationController) in
             let controller = AllPostViewController.instantiate()
-            let viewModel = r.resolve(AllPostViewModel.self, argument: navigation)
+            controller.viewModel = r.resolve(AllPostViewModel.self, argument: navigation)
             return controller
+        }
+        .initCompleted { (r, c) in
+            c.bindViewModel()
         }
         
         container.register(AllPostViewModel.self) { (r, navigation: UINavigationController) in
