@@ -30,6 +30,5 @@ final class Application {
         }
         navigationController.viewControllers = [controller]
         window.rootViewController = navigationController
-        window.makeKeyAndVisible()
     }
 }

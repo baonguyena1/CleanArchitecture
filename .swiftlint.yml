@@ -26,11 +26,11 @@ opt_in_rules: # some rules are only opt-in
   - single_test_class
   - sorted_first_last
   # - trailing_closure
-  - unneeded_parentheses_in_closure_argument
+  # - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call
   - yoda_condition
-  - closure_end_indentation
+  # - closure_end_indentation
   - discouraged_optional_boolean
   # - discouraged_optional_collection
   - force_unwrapping

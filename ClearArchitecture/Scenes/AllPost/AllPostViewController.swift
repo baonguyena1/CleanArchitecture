@@ -17,7 +17,6 @@ class AllPostViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - BindableType

@@ -35,6 +35,6 @@ extension APIInput {
             return urlString
         }
         urlComponent.queryItems = queries
-        return urlComponent.url?.absoluteString.urlEscaped ?? urlString
+        return urlComponent.url?.absoluteString ?? urlString
     }
 }
