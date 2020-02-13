@@ -27,10 +27,6 @@ public struct Post: Codable {
         self.createdAt = createdAt
     }
 
-    public init(body: String, title: String) {
-        self.init(body: body, title: title, uid: NSUUID().uuidString, userId: "5", createdAt: String(round(Date().timeIntervalSince1970 * 1000)))
-    }
-
     private enum CodingKeys: String, CodingKey {
         case body
         case title
@@ -72,5 +68,15 @@ extension Post: Equatable {
                 lhs.body == rhs.body &&
                 lhs.userId == rhs.userId &&
                 lhs.createdAt == rhs.createdAt
+    }
+}
+
+extension Post: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(uid)
+    }
+    
+    public var hashValue: Int {
+        return uid.hashValue
     }
 }

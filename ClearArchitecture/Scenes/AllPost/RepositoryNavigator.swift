@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol AllPostNavigatorProtocol {
+protocol RepositoryNavigatorProtocol {
     
 }
 
-struct AllPostNavigator: AllPostNavigatorProtocol {
+struct RepositoryNavigator: RepositoryNavigatorProtocol {
     var navigationController: UINavigationController!
 }

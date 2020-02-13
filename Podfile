@@ -4,6 +4,7 @@ platform :ios, '12.0'
 def common
   pod 'SwiftLint'
   pod 'RxSwift', '~> 5'
+   pod 'OrderedSet'
 end
 
 def application
@@ -11,6 +12,7 @@ def application
   pod 'NSObject+Rx'
   pod 'Reusable'
   pod 'Swinject'
+  pod 'MBProgressHUD'
 end
 
 target 'ClearArchitecture' do

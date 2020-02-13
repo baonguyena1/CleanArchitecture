@@ -25,7 +25,7 @@ final class Application {
     
     func configureMainInterface(in window: UIWindow) {
         let navigationController = UINavigationController()
-        guard let controller = dependencyAssembly.container.resolve(AllPostViewController.self, argument: navigationController) else {
+        guard let controller = dependencyAssembly.container.resolve(RepositoryViewController.self, argument: navigationController) else {
             return
         }
         navigationController.viewControllers = [controller]
