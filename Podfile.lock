@@ -1,16 +1,51 @@
 PODS:
+  - Alamofire (4.9.1)
+  - "NSObject+Rx (5.0.2)":
+    - RxSwift (~> 5.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
   - SwiftLint (0.38.2)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - Alamofire
+  - "NSObject+Rx"
+  - Reusable
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
   - SwiftLint
+  - Swinject
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - "NSObject+Rx"
+    - Reusable
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SwiftLint
+    - Swinject
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  "NSObject+Rx": 2eb2cf51fd1c554118449a7fbc36e4cd620b9e94
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 190b095359db66f803bc04d0139493e838f20174
+PODFILE CHECKSUM: a7460ab63a9d137aeb6a5ab0f89eadcc3c4489de
 
 COCOAPODS: 1.8.4
