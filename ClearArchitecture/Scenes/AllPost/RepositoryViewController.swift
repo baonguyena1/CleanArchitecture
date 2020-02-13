@@ -9,11 +9,13 @@
 import UIKit
 import Reusable
 import RxSwift
+import RxCocoa
 import NSObject_Rx
+import Domain
 
-class AllPostViewController: UIViewController, BindableType {
+class RepositoryViewController: UIViewController, BindableType {
     
-    var viewModel: AllPostViewModel!
+    var viewModel: RepositoryViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +23,21 @@ class AllPostViewController: UIViewController, BindableType {
     
     // MARK: - BindableType
     func bindViewModel() {
-        let input = AllPostViewModel.Input(fetching: self.rx.viewDidLoad.asDriver())
+        let input = RepositoryViewModel.Input(fetchingTrigger: .just(()),
+                                              refreshTrigger: .empty(),
+                                              loadMoreTrigger: .empty())
         let output = viewModel.transform(input)
-        output.posts
-            .drive(onNext: { (posts) in
-                print(posts)
-            })
+
+        output.repositories
+            .drive(repositoryBinder)
+            .disposed(by: rx.disposeBag)
+
+        output.loading
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
+
+        output.error
+            .drive(rx.error)
             .disposed(by: rx.disposeBag)
     }
 
@@ -39,9 +50,15 @@ class AllPostViewController: UIViewController, BindableType {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private var repositoryBinder: Binder<PagingInfo<Repository>> {
+        return Binder(self) { [weak self] (_, result) in
+            print(result)
+        }
+    }
 
 }
 
-extension AllPostViewController: StoryboardBased {
+extension RepositoryViewController: StoryboardBased {
     static var sceneStoryboard = UIStoryboard(name: "Main", bundle: nil)
 }

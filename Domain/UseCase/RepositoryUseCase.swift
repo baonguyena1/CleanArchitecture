@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-public protocol AllPostUseCase {
-    func getPosts() -> Observable<[Post]>
+public protocol RepositoryUseCase {
+    func getRepositories(page: Int, size: Int) -> Observable<PagingInfo<Repository>>
 }

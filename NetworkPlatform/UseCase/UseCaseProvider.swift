@@ -16,7 +16,7 @@ public final class UseCaseProvider {
         networkProvider = NetworkProvider()
     }
     
-    public func makeAllPostUseCase() -> Domain.AllPostUseCase {
-        return AllPostUseCase(repository: networkProvider.makePostRepository())
+    public func makeRepositoryUseCase() -> Domain.RepositoryUseCase {
+        return RepositoryUseCase(repository: networkProvider.makePostRepository())
     }
 }

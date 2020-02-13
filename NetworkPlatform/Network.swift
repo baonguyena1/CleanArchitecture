@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import RxSwift
 
-final class Network<T: Codable> {
+final class Network {
     private var manager: Alamofire.SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30
@@ -29,7 +29,7 @@ final class Network<T: Codable> {
         return decoder
     }()
     
-    func requestItem(_ input: APIInput) -> Observable<T> {
+    func requestItem<T: Codable>(_ input: APIInput) -> Observable<T> {
         return Observable.create { [weak self] (observable) -> Disposable in
             
             guard let `self` = self else {
@@ -58,9 +58,10 @@ final class Network<T: Codable> {
                 request.cancel()
             }
         }
+        .debug(input.urlEncoding, trimOutput: true)
     }
     
-    func requestItems(_ input: APIInput) -> Observable<[T]> {
+    func requestItems<T: Codable>(_ input: APIInput) -> Observable<[T]> {
         return Observable.create { [weak self] (observable) -> Disposable in
             
             guard let `self` = self else {
@@ -89,5 +90,6 @@ final class Network<T: Codable> {
                 request.cancel()
             }
         }
+        .debug(input.urlEncoding, trimOutput: true)
     }
 }

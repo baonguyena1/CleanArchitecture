@@ -11,8 +11,8 @@ import Domain
 
 final class NetworkProvider {
     
-    public func makePostRepository() -> PostRepository {
-        let network = Network<Post>()
-        return PostRepository(network: network)
+    public func makePostRepository() -> RepositoryNetwork {
+        let network = Network()
+        return RepositoryNetwork(network: network)
     }
 }

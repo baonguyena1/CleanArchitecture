@@ -44,6 +44,17 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - .bundle
 
 # rule configurations
+force_try:
+  severity: warning # explicitly. Give warning only for force try
+
+type_body_length:
+  - 300 # warning
+  - 400 # error
+
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 800
 
 line_length:
   ignores_function_declarations: true
@@ -58,3 +69,7 @@ line_length:
 #     - GlobalAPIKey
 trailing_whitespace:
   ignores_empty_lines: true
+
+large_tuple: # warn user when using 3 values in tuple, give error if there are 4
+   - 6
+   - 7

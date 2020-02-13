@@ -31,19 +31,26 @@
 		22C5C86C23F2B613003BE565 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5C86B23F2B613003BE565 /* ResponseError.swift */; };
 		22CF34B323F4E83B00E0F4FF /* DependencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34B223F4E83B00E0F4FF /* DependencyAssembly.swift */; };
 		22CF34B823F51F3E00E0F4FF /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34B723F51F3E00E0F4FF /* Application.swift */; };
+		22CF34C123F527D700E0F4FF /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34BD23F527D700E0F4FF /* ErrorTracker.swift */; };
+		22CF34C223F527D700E0F4FF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34BE23F527D700E0F4FF /* ActivityIndicator.swift */; };
+		22CF34C323F527D700E0F4FF /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34BF23F527D700E0F4FF /* Observable+Ext.swift */; };
+		22CF34C523F52E1100E0F4FF /* PagingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34C423F52E1100E0F4FF /* PagingInfo.swift */; };
+		22CF34C723F533DD00E0F4FF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34C623F533DD00E0F4FF /* Constant.swift */; };
+		22CF34C923F53AAC00E0F4FF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34C823F53AAC00E0F4FF /* Repository.swift */; };
+		22CF34CC23F5442600E0F4FF /* RepositoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34CB23F5442600E0F4FF /* RepositoryPage.swift */; };
+		22CF34CE23F5471F00E0F4FF /* RepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34CD23F5471F00E0F4FF /* RepositoryUseCase.swift */; };
+		22CF34D023F5475B00E0F4FF /* RepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34CF23F5475B00E0F4FF /* RepositoryUseCase.swift */; };
+		22CF34D223F549DD00E0F4FF /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34D123F549DD00E0F4FF /* RepositoryViewModel.swift */; };
+		22CF34D423F54B1600E0F4FF /* RepositoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF34D323F54B1600E0F4FF /* RepositoryNetwork.swift */; };
 		22E9F4C423F3EC2F00C79D05 /* APIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4C323F3EC2F00C79D05 /* APIInput.swift */; };
 		22E9F4C723F3EEE600C79D05 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4C623F3EEE600C79D05 /* String+Helper.swift */; };
 		22E9F4CA23F3F11500C79D05 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4C923F3F11500C79D05 /* Constant.swift */; };
-		22E9F4CD23F3F8D300C79D05 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4CC23F3F8D300C79D05 /* PostRepository.swift */; };
 		22E9F4D023F3F9E600C79D05 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4CF23F3F9E600C79D05 /* Post.swift */; };
-		22E9F4D323F3FD6500C79D05 /* AllPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4D223F3FD6500C79D05 /* AllPostUseCase.swift */; };
-		22E9F4D623F3FF8700C79D05 /* AllPostUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4D523F3FF8700C79D05 /* AllPostUseCase.swift */; };
 		22E9F4D923F4010D00C79D05 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4D823F4010D00C79D05 /* ViewModelType.swift */; };
 		22E9F4DC23F4017300C79D05 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4DB23F4017300C79D05 /* BindableType.swift */; };
 		22E9F4E323F405E300C79D05 /* UIViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E223F405E300C79D05 /* UIViewController+Reactive.swift */; };
-		22E9F4E823F4062E00C79D05 /* AllPostNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E423F4062E00C79D05 /* AllPostNavigator.swift */; };
-		22E9F4EA23F4062E00C79D05 /* AllPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E623F4062E00C79D05 /* AllPostViewController.swift */; };
-		22E9F4EB23F4062E00C79D05 /* AllPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E723F4062E00C79D05 /* AllPostViewModel.swift */; };
+		22E9F4E823F4062E00C79D05 /* RepositoryNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E423F4062E00C79D05 /* RepositoryNavigator.swift */; };
+		22E9F4EA23F4062E00C79D05 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4E623F4062E00C79D05 /* RepositoryViewController.swift */; };
 		22E9F4ED23F410D800C79D05 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E9F4EC23F410D800C79D05 /* NetworkProvider.swift */; };
 		256E44F662299DD255478AAB /* Pods_ClearArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED5808D74E350A8B941A112D /* Pods_ClearArchitectureTests.framework */; };
 		78154F2BD58DE4052722CE15 /* Pods_ClearArchitecture_ClearArchitectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F04E237B3125501E79BD6772 /* Pods_ClearArchitecture_ClearArchitectureUITests.framework */; };
@@ -161,19 +168,26 @@
 		22C5C86B23F2B613003BE565 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		22CF34B223F4E83B00E0F4FF /* DependencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyAssembly.swift; sourceTree = "<group>"; };
 		22CF34B723F51F3E00E0F4FF /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		22CF34BD23F527D700E0F4FF /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		22CF34BE23F527D700E0F4FF /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		22CF34BF23F527D700E0F4FF /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
+		22CF34C423F52E1100E0F4FF /* PagingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingInfo.swift; sourceTree = "<group>"; };
+		22CF34C623F533DD00E0F4FF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		22CF34C823F53AAC00E0F4FF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		22CF34CB23F5442600E0F4FF /* RepositoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPage.swift; sourceTree = "<group>"; };
+		22CF34CD23F5471F00E0F4FF /* RepositoryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryUseCase.swift; sourceTree = "<group>"; };
+		22CF34CF23F5475B00E0F4FF /* RepositoryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryUseCase.swift; sourceTree = "<group>"; };
+		22CF34D123F549DD00E0F4FF /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		22CF34D323F54B1600E0F4FF /* RepositoryNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryNetwork.swift; sourceTree = "<group>"; };
 		22E9F4C323F3EC2F00C79D05 /* APIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInput.swift; sourceTree = "<group>"; };
 		22E9F4C623F3EEE600C79D05 /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		22E9F4C923F3F11500C79D05 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		22E9F4CC23F3F8D300C79D05 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		22E9F4CF23F3F9E600C79D05 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		22E9F4D223F3FD6500C79D05 /* AllPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostUseCase.swift; sourceTree = "<group>"; };
-		22E9F4D523F3FF8700C79D05 /* AllPostUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostUseCase.swift; sourceTree = "<group>"; };
 		22E9F4D823F4010D00C79D05 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		22E9F4DB23F4017300C79D05 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		22E9F4E223F405E300C79D05 /* UIViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reactive.swift"; sourceTree = "<group>"; };
-		22E9F4E423F4062E00C79D05 /* AllPostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostNavigator.swift; sourceTree = "<group>"; };
-		22E9F4E623F4062E00C79D05 /* AllPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostViewController.swift; sourceTree = "<group>"; };
-		22E9F4E723F4062E00C79D05 /* AllPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostViewModel.swift; sourceTree = "<group>"; };
+		22E9F4E423F4062E00C79D05 /* RepositoryNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNavigator.swift; sourceTree = "<group>"; };
+		22E9F4E623F4062E00C79D05 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		22E9F4EC23F410D800C79D05 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		37E9BACA9C0C10567C6A0F5F /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 		519BB947C95D2177BBC9E53E /* Pods-ClearArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClearArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-ClearArchitectureTests/Pods-ClearArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				22CF34B223F4E83B00E0F4FF /* DependencyAssembly.swift */,
+				22CF34C623F533DD00E0F4FF /* Constant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -344,6 +359,7 @@
 		22C5C84823F2A607003BE565 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				22CF34CA23F5441C00E0F4FF /* Entries */,
 				22E9F4D423F3FED700C79D05 /* UseCase */,
 				22E9F4CB23F3F81A00C79D05 /* Repository */,
 				22E9F4C823F3F10500C79D05 /* Constant */,
@@ -380,6 +396,7 @@
 		22CF34B423F51EC700E0F4FF /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				22CF34BB23F527D700E0F4FF /* Utility */,
 				22CF34B623F51EED00E0F4FF /* Resource */,
 				22CF34B523F51EDD00E0F4FF /* Storyboard */,
 				226943B523F29C9C003D42BF /* AppDelegate.swift */,
@@ -407,6 +424,25 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		22CF34BB23F527D700E0F4FF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				22CF34BD23F527D700E0F4FF /* ErrorTracker.swift */,
+				22CF34BE23F527D700E0F4FF /* ActivityIndicator.swift */,
+				22CF34BF23F527D700E0F4FF /* Observable+Ext.swift */,
+			);
+			name = Utility;
+			path = "../../../../../Downloads/CleanArchitectureRxSwift-master/CleanArchitectureRxSwift/Utility";
+			sourceTree = "<group>";
+		};
+		22CF34CA23F5441C00E0F4FF /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				22CF34CB23F5442600E0F4FF /* RepositoryPage.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
 		22E9F4C523F3EED700C79D05 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +462,7 @@
 		22E9F4CB23F3F81A00C79D05 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				22E9F4CC23F3F8D300C79D05 /* PostRepository.swift */,
+				22CF34D323F54B1600E0F4FF /* RepositoryNetwork.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -435,6 +471,8 @@
 			isa = PBXGroup;
 			children = (
 				22E9F4CF23F3F9E600C79D05 /* Post.swift */,
+				22CF34C423F52E1100E0F4FF /* PagingInfo.swift */,
+				22CF34C823F53AAC00E0F4FF /* Repository.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -442,7 +480,7 @@
 		22E9F4D123F3FD5900C79D05 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				22E9F4D223F3FD6500C79D05 /* AllPostUseCase.swift */,
+				22CF34CD23F5471F00E0F4FF /* RepositoryUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -450,7 +488,7 @@
 		22E9F4D423F3FED700C79D05 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				22E9F4D523F3FF8700C79D05 /* AllPostUseCase.swift */,
+				22CF34CF23F5475B00E0F4FF /* RepositoryUseCase.swift */,
 				2257F93D23F4E2350031DD30 /* UseCaseProvider.swift */,
 			);
 			path = UseCase;
@@ -483,9 +521,9 @@
 		22E9F4E023F4059100C79D05 /* AllPost */ = {
 			isa = PBXGroup;
 			children = (
-				22E9F4E423F4062E00C79D05 /* AllPostNavigator.swift */,
-				22E9F4E623F4062E00C79D05 /* AllPostViewController.swift */,
-				22E9F4E723F4062E00C79D05 /* AllPostViewModel.swift */,
+				22E9F4E423F4062E00C79D05 /* RepositoryNavigator.swift */,
+				22E9F4E623F4062E00C79D05 /* RepositoryViewController.swift */,
+				22CF34D123F549DD00E0F4FF /* RepositoryViewModel.swift */,
 			);
 			path = AllPost;
 			sourceTree = "<group>";
@@ -975,15 +1013,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E9F4E823F4062E00C79D05 /* AllPostNavigator.swift in Sources */,
-				22E9F4EA23F4062E00C79D05 /* AllPostViewController.swift in Sources */,
+				22CF34D223F549DD00E0F4FF /* RepositoryViewModel.swift in Sources */,
+				22E9F4E823F4062E00C79D05 /* RepositoryNavigator.swift in Sources */,
+				22E9F4EA23F4062E00C79D05 /* RepositoryViewController.swift in Sources */,
 				22CF34B823F51F3E00E0F4FF /* Application.swift in Sources */,
+				22CF34C223F527D700E0F4FF /* ActivityIndicator.swift in Sources */,
 				22CF34B323F4E83B00E0F4FF /* DependencyAssembly.swift in Sources */,
 				22E9F4E323F405E300C79D05 /* UIViewController+Reactive.swift in Sources */,
 				22E9F4D923F4010D00C79D05 /* ViewModelType.swift in Sources */,
-				22E9F4EB23F4062E00C79D05 /* AllPostViewModel.swift in Sources */,
+				22CF34C723F533DD00E0F4FF /* Constant.swift in Sources */,
+				22CF34C123F527D700E0F4FF /* ErrorTracker.swift in Sources */,
 				226943B623F29C9C003D42BF /* AppDelegate.swift in Sources */,
 				226943B823F29C9C003D42BF /* SceneDelegate.swift in Sources */,
+				22CF34C323F527D700E0F4FF /* Observable+Ext.swift in Sources */,
 				22E9F4DC23F4017300C79D05 /* BindableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1009,7 +1051,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E9F4D023F3F9E600C79D05 /* Post.swift in Sources */,
-				22E9F4D323F3FD6500C79D05 /* AllPostUseCase.swift in Sources */,
+				22CF34C523F52E1100E0F4FF /* PagingInfo.swift in Sources */,
+				22CF34C923F53AAC00E0F4FF /* Repository.swift in Sources */,
+				22CF34CE23F5471F00E0F4FF /* RepositoryUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1025,14 +1069,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CF34CC23F5442600E0F4FF /* RepositoryPage.swift in Sources */,
 				22E9F4CA23F3F11500C79D05 /* Constant.swift in Sources */,
-				22E9F4D623F3FF8700C79D05 /* AllPostUseCase.swift in Sources */,
 				22C5C86523F2B478003BE565 /* Network.swift in Sources */,
+				22CF34D023F5475B00E0F4FF /* RepositoryUseCase.swift in Sources */,
+				22CF34D423F54B1600E0F4FF /* RepositoryNetwork.swift in Sources */,
 				2257F93E23F4E2350031DD30 /* UseCaseProvider.swift in Sources */,
 				22C5C86923F2B5A6003BE565 /* APIResponseBase.swift in Sources */,
 				22C5C86723F2B538003BE565 /* APIError.swift in Sources */,
 				22C5C86C23F2B613003BE565 /* ResponseError.swift in Sources */,
-				22E9F4CD23F3F8D300C79D05 /* PostRepository.swift in Sources */,
 				22E9F4C723F3EEE600C79D05 /* String+Helper.swift in Sources */,
 				22E9F4C423F3EC2F00C79D05 /* APIInput.swift in Sources */,
 				22E9F4ED23F410D800C79D05 /* NetworkProvider.swift in Sources */,

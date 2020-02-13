@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MBProgressHUD
 
 extension Reactive where Base: UIViewController {
     var viewDidLoad: ControlEvent<Void> {
@@ -69,5 +70,36 @@ extension Reactive where Base: UIViewController {
     var isDismissing: ControlEvent<Bool> {
         let source = sentMessage(#selector(Base.dismiss)).map { $0.first as? Bool ?? false }
         return ControlEvent(events: source)
+    }
+    
+    var isLoading: Binder<Bool> {
+        return Binder(base) { vc, isLoading in
+            if isLoading {
+                MBProgressHUD.showAdded(to: vc.view, animated: true)
+            } else {
+                MBProgressHUD.hide(for: vc.view, animated: true)
+            }
+        }
+    }
+    
+    var error: Binder<Error> {
+        return Binder(base) { vc, error in
+            vc.showInfoAlert(message: error.localizedDescription)
+        }
+    }
+    
+}
+
+extension UIViewController {
+    func showInfoAlert(_ title: String? = nil, message: String, completion: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: { (_) in
+            if let handler = completion {
+                handler()
+            }
+        })
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
