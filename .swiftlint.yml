@@ -1,3 +1,6 @@
+disabled_rules: # rule identifiers to exclude from running
+  - identifier_name
+  - multiple_closures_with_trailing_closure
 opt_in_rules: # some rules are only opt-in
   - attributes
   - closure_spacing
@@ -8,7 +11,7 @@ opt_in_rules: # some rules are only opt-in
   - extension_access_modifier
   - fatal_error_message
   - first_where
-  - implicitly_unwrapped_optional
+  # - implicitly_unwrapped_optional
   - joined_default_parameter
   - literal_expression_end_indentation
   - multiline_arguments
@@ -22,14 +25,14 @@ opt_in_rules: # some rules are only opt-in
   - redundant_nil_coalescing
   - single_test_class
   - sorted_first_last
-  - trailing_closure
+  # - trailing_closure
   - unneeded_parentheses_in_closure_argument
   - untyped_error_in_catch
   - vertical_parameter_alignment_on_call
   - yoda_condition
   - closure_end_indentation
   - discouraged_optional_boolean
-  - discouraged_optional_collection
+  # - discouraged_optional_collection
   - force_unwrapping
   - large_tuple
   - object_literal
@@ -45,8 +48,13 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
 line_length:
   ignores_function_declarations: true
   ignores_comments: true
-identifier_name:
-  excluded:
-    - id
+# identifier_name:
+#   allowed_symbols: "_"
+#   min_length: # only min_length
+#     error: 4 # only error
+#   excluded:
+#     - id
+#     - URL
+#     - GlobalAPIKey
 trailing_whitespace:
   ignores_empty_lines: true
