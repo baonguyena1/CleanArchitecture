@@ -8,6 +8,14 @@
 
 import Foundation
 
+struct APIHeader {
+    static let contentType = "Content-Type"
+    static let contentTypeValue = "application/json; charset=utf-8"
+    
+    static let accept = "Accept"
+    static let acceptValue = "application/json"
+}
+
 struct PageSize {
     static let size = 10
     static let firstPage = 2

@@ -11,7 +11,6 @@ import Reusable
 import RxSwift
 import RxCocoa
 import NSObject_Rx
-import Domain
 
 class RepositoryViewController: UIViewController, BindableType {
     
@@ -23,9 +22,7 @@ class RepositoryViewController: UIViewController, BindableType {
     
     // MARK: - BindableType
     func bindViewModel() {
-        let input = RepositoryViewModel.Input(fetchingTrigger: .just(()),
-                                              refreshTrigger: .empty(),
-                                              loadMoreTrigger: .empty())
+        let input = RepositoryViewModel.Input(fetchingTrigger: rx.viewDidLoad.asDriver().mapToVoid())
         let output = viewModel.transform(input)
 
         output.repositories
@@ -40,16 +37,6 @@ class RepositoryViewController: UIViewController, BindableType {
             .drive(rx.error)
             .disposed(by: rx.disposeBag)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     private var repositoryBinder: Binder<PagingInfo<Repository>> {
         return Binder(self) { [weak self] (_, result) in

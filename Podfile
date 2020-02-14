@@ -4,7 +4,8 @@ platform :ios, '12.0'
 def common
   pod 'SwiftLint'
   pod 'RxSwift', '~> 5'
-   pod 'OrderedSet'
+  pod 'OrderedSet'
+  pod 'Alamofire'
 end
 
 def application
@@ -32,17 +33,4 @@ target 'ClearArchitecture' do
     # Pods for testing
   end
 
-end
-
-target 'Domain' do
-  use_frameworks!
-  
-  common
-end
-
-target 'NetworkPlatform' do
-  use_frameworks!
-
-  common
-  pod 'Alamofire'
 end

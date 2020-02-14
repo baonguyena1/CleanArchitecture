@@ -8,8 +8,6 @@
 
 import UIKit
 import Swinject
-import Domain
-import NetworkPlatform
 
 class DependencyAssembly {
     
@@ -27,7 +25,9 @@ class DependencyAssembly {
         
         container.register(RepositoryViewModel.self) { (r, navigation: UINavigationController) in
             var viewModel = RepositoryViewModel()
-            viewModel.useCase = r.resolve(RepositoryUseCase.self)
+            let useCaseProvider = r.resolve(UseCaseProvider.self)
+            assert(useCaseProvider != nil, "UseCaseProvider is nil")
+            viewModel.useCase = useCaseProvider!.makeRepositoryUseCase()
             viewModel.navigator = r.resolve(RepositoryNavigator.self, argument: navigation)
             return viewModel
         }
@@ -38,16 +38,16 @@ class DependencyAssembly {
             return navigator
         }
         
-        container.register(RepositoryUseCase.self) { r in
-            let useCaseProvider = r.resolve(UseCaseProvider.self)
-            assert(useCaseProvider != nil, "UseCaseProvider is nil")
-            return useCaseProvider!.makeRepositoryUseCase()
-        }
+        container.register(UseCaseProvider.self) { r in
+            let useCaseProvider = UseCaseProvider()
+            useCaseProvider.networkProvider = r.resolve(NetworkProvider.self)
+            return useCaseProvider
+        }.inObjectScope(.container)
         
-        container.register(UseCaseProvider.self) { _ in
-            return NetworkPlatform.UseCaseProvider()
-        }
-        .inObjectScope(.container)
+        container.register(NetworkProvider.self) { _ in
+            return NetworkProvider()
+        }.inObjectScope(.container)
+        
         return container
     }()
     

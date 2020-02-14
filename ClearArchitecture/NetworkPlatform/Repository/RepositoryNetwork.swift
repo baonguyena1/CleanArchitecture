@@ -6,7 +6,6 @@
 //  Copyright © 2020 Storm Ng. All rights reserved.
 //
 
-import Domain
 import RxSwift
 
 final class RepositoryNetwork {

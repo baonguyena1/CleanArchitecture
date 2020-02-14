@@ -8,7 +8,6 @@
 
 import UIKit
 import Swinject
-import NetworkPlatform
 
 final class Application {
     static let shared = Application()
