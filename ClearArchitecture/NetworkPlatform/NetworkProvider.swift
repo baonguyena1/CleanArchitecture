@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import Domain
 
 final class NetworkProvider {
     
-    public func makePostRepository() -> RepositoryNetwork {
+    public func makeRepositoryNetwork() -> RepositoryNetwork {
         let network = Network()
         return RepositoryNetwork(network: network)
     }

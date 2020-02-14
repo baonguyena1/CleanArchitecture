@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Domain
 import RxSwift
 import RxCocoa
 
@@ -18,8 +17,6 @@ struct RepositoryViewModel: ViewModelType {
     
     struct Input {
         let fetchingTrigger: Driver<Void>
-        let refreshTrigger: Driver<Void>
-        let loadMoreTrigger: Driver<Void>
     }
     
     struct Output {
@@ -32,24 +29,28 @@ struct RepositoryViewModel: ViewModelType {
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
         
-        let loadMoreOutput = self.setupLoadMorePaging(loadTrigger: input.fetchingTrigger,
-                                                      getItems: { () -> Observable<PagingInfo<Repository>> in
-            return self.useCase.getRepositories(page: PageSize.firstPage, size: PageSize.size)
-                .trackActivity(activityIndicator)
-                .trackError(errorTracker)
-        }, refreshTrigger: input.refreshTrigger, refreshItems: { () -> Observable<PagingInfo<Repository>> in
-            return self.useCase.getRepositories(page: PageSize.firstPage, size: PageSize.size)
-                .trackError(errorTracker)
-        }, loadMoreTrigger: input.loadMoreTrigger) { (page) -> Observable<PagingInfo<Repository>> in
-            return self.useCase.getRepositories(page: page, size: PageSize.size)
+        let result = self.useCase.getRepositories(page: PageSize.firstPage, size: PageSize.size)
+            .trackActivity(activityIndicator)
             .trackError(errorTracker)
-        }
         
-        let (page, fetchItems, error, loading, refreshing, loadingMore) = loadMoreOutput
+//        let loadMoreOutput = self.setupLoadMorePaging(loadTrigger: input.fetchingTrigger,
+//                                                      getItems: { () -> Observable<PagingInfo<Repository>> in
+//            return self.useCase.getRepositories(page: PageSize.firstPage, size: PageSize.size)
+//                .trackActivity(activityIndicator)
+//                .trackError(errorTracker)
+//        }, refreshTrigger: .empty(), refreshItems: { () -> Observable<PagingInfo<Repository>> in
+//            return self.useCase.getRepositories(page: PageSize.firstPage, size: PageSize.size)
+//                .trackError(errorTracker)
+//        }, loadMoreTrigger: .empty()) { (page) -> Observable<PagingInfo<Repository>> in
+//            return self.useCase.getRepositories(page: page, size: PageSize.size)
+//            .trackError(errorTracker)
+//        }
+//
+//        let (page, fetchItems, error, loading, refreshing, loadingMore) = loadMoreOutput
         
-        return Output(repositories: page.asDriver(),
-                      loading: Driver.merge(activityIndicator.asDriver(), loading.asDriver()),
-                      error: Driver.merge(errorTracker.asDriver(), error.asDriver()))
+        return Output(repositories: result.asDriverOnErrorJustComplete(),
+                      loading: activityIndicator.asDriver(),
+                      error: errorTracker.asDriver())
     }
     
 }

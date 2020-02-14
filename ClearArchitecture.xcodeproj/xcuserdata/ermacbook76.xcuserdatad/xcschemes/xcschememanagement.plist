@@ -7,17 +7,20 @@
 		<key>ClearArchitecture.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>13</integer>
 		</dict>
-		<key>Domain.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>22C5C82323F2A5F3003BE565</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>NetworkPlatform.xcscheme_^#shared#^_</key>
+		<key>22C5C84623F2A607003BE565</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>17</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
