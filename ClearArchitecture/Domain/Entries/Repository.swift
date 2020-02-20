@@ -14,7 +14,7 @@ public struct Repository : Codable {
     let name : String?
     let full_name : String?
     let isPrivate : Bool?
-//    let owner : Owner?
+    let owner : Owner?
     let html_url : String?
     let description : String?
     let fork : Bool?
@@ -91,7 +91,7 @@ public struct Repository : Codable {
         case name = "name"
         case full_name = "full_name"
         case isPrivate = "private"
-//        case owner = "owner"
+        case owner = "owner"
         case html_url = "html_url"
         case description = "description"
         case fork = "fork"
@@ -169,7 +169,7 @@ public struct Repository : Codable {
         name = try values.decodeIfPresent(String.self, forKey: .name)
         full_name = try values.decodeIfPresent(String.self, forKey: .full_name)
         isPrivate = try values.decodeIfPresent(Bool.self, forKey: .isPrivate)
-//        owner = try values.decodeIfPresent(Owner.self, forKey: .owner)
+        owner = try values.decodeIfPresent(Owner.self, forKey: .owner)
         html_url = try values.decodeIfPresent(String.self, forKey: .html_url)
         description = try values.decodeIfPresent(String.self, forKey: .description)
         fork = try values.decodeIfPresent(Bool.self, forKey: .fork)
@@ -243,6 +243,10 @@ public struct Repository : Codable {
 }
 
 extension Repository: Hashable {
+    public static func == (lhs: Repository, rhs: Repository) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    
     public var hashValue: Int {
         return id.hashValue
     }

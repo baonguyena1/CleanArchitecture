@@ -9,7 +9,13 @@
 import Foundation
 
 class UseCaseProvider {
-    var networkProvider: NetworkProvider!
+    static let shared = UseCaseProvider()
+    
+    private var networkProvider: NetworkProvider!
+    
+    private init() {
+        self.networkProvider = NetworkProvider()
+    }
     
     func makeRepositoryUseCase() -> RepositoryUseCase {
         return RepositoryUseCase(network: networkProvider.makeRepositoryNetwork())

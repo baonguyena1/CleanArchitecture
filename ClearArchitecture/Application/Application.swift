@@ -12,21 +12,12 @@ import Swinject
 final class Application {
     static let shared = Application()
     
-    private var dependencyAssembly: DependencyAssembly!
-    
-    private var container: Container {
-        return dependencyAssembly.container
-    }
-    
     private init() {
-        dependencyAssembly = DependencyAssembly()
     }
     
     func configureMainInterface(in window: UIWindow) {
         let navigationController = UINavigationController()
-        guard let controller = dependencyAssembly.container.resolve(RepositoryViewController.self, argument: navigationController) else {
-            return
-        }
+        let controller: RepositoryViewController = DefaultAssembler.shared.resolveController(navigation: navigationController)
         navigationController.viewControllers = [controller]
         window.rootViewController = navigationController
     }

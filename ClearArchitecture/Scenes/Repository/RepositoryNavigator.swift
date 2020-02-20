@@ -13,5 +13,5 @@ protocol RepositoryNavigatorProtocol {
 }
 
 struct RepositoryNavigator: RepositoryNavigatorProtocol {
-    var navigationController: UINavigationController!
+    private(set) var navigationController: UINavigationController
 }

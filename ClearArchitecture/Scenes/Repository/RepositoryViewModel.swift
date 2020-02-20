@@ -12,8 +12,8 @@ import RxCocoa
 
 struct RepositoryViewModel: ViewModelType {
     
-    var useCase: RepositoryUseCase!
-    var navigator: RepositoryNavigator!
+    private(set) var useCase: RepositoryUseCase
+    private(set) var navigator: RepositoryNavigator
     
     struct Input {
         let fetchingTrigger: Driver<Void>
