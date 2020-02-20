@@ -9,7 +9,6 @@ def application
   pod 'RxCocoa', '~> 5'
   pod 'NSObject+Rx'
   pod 'Reusable'
-  pod 'Swinject'
   pod 'MBProgressHUD'
   pod 'MJRefresh'
   pod 'Kingfisher', '~> 5.0'
