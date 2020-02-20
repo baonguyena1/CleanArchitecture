@@ -1,6 +1,10 @@
 PODS:
   - Alamofire (4.9.1)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
   - MBProgressHUD (1.2.0)
+  - MJRefresh (3.3.1)
   - "NSObject+Rx (5.0.2)":
     - RxSwift (~> 5.0)
   - OrderedSet (5.0.0)
@@ -20,7 +24,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher (~> 5.0)
   - MBProgressHUD
+  - MJRefresh
   - "NSObject+Rx"
   - OrderedSet
   - Reusable
@@ -32,7 +38,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - MBProgressHUD
+    - MJRefresh
     - "NSObject+Rx"
     - OrderedSet
     - Reusable
@@ -44,7 +52,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   "NSObject+Rx": 2eb2cf51fd1c554118449a7fbc36e4cd620b9e94
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
@@ -54,6 +64,6 @@ SPEC CHECKSUMS:
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 8ead014fe6ead6bcdf07f26c427a41056bf04c2d
+PODFILE CHECKSUM: efd0c3be2568bd2db2827d1a90c8909dc9fc3ad0
 
 COCOAPODS: 1.8.4

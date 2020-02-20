@@ -1,19 +1,18 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-def common
+def application
   pod 'SwiftLint'
   pod 'RxSwift', '~> 5'
   pod 'OrderedSet'
   pod 'Alamofire'
-end
-
-def application
   pod 'RxCocoa', '~> 5'
   pod 'NSObject+Rx'
   pod 'Reusable'
   pod 'Swinject'
   pod 'MBProgressHUD'
+  pod 'MJRefresh'
+  pod 'Kingfisher', '~> 5.0'
 end
 
 target 'ClearArchitecture' do
@@ -21,7 +20,6 @@ target 'ClearArchitecture' do
   use_frameworks!
 
   # Pods for ClearArchitecture
-  common
   application
 
   target 'ClearArchitectureTests' do
